@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Builder</title>
     <link rel="stylesheet" href="./index.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
 <body>
-    <div class="header">
-        <div class="logo">Resume Builder</div>
-        <div class="home-detail">
-            <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Contact</li>
-            </ul>
-        </div>
-    </div>
+    <header class="nav">
+            <div class="logo">Resume Builder</div>
+            <div class="home-detail">
+                <ul>
+                    <li>Home</li>
+                    <li class="aboutUs">About Us</li>
+                    <li class="contact">Contact</li>
+                </ul>
+            </div>
+    </header>
     <div class="section-1">
         <div class="left-conatiner">
             <div class="para1">
@@ -31,7 +32,7 @@
                 <br>easy-to-use platform.
             </div>
             <div class="getBtn-container">
-                <button class="getBtn">Get</button>
+                <button class="button-29">Get</button>
             </div>
         </div>
         <div class="right-conatiner">
@@ -40,6 +41,22 @@
             </div>
         </div>
     </div>
+    <div class="slider-section">
+        <div class="slider-section-content">
+            <button id="prevBtn" class="btn">prev</button>
+            <div class="slider-content" >
+              <img src="./img/temp1 (1).jpg" alt="">
+              <img src="./img/temp2.jpg" alt="">
+              <img src="./img/temp3.jpg" alt="">
+              <img src="./img/temp4.jpg" alt="">
+              <img src="./img/temp5.jpg" alt="">
+              <img src="./img/temp6.jpg" alt="">
+              <img src="./img/temp7.jpg" alt="">
+            </div>
+            <button id="nextBtn" class="btn">Next</button>
+          </div>
+    </div>
+    <hr>
     <div class="section-2">
         <div class="section-container">
             <div class="left-section2">
@@ -72,111 +89,50 @@
         <div class="section2-content"></div>
         
     </div>
-    <div class="section-3-form">
-        <div class="about-section">
-            <div class="about-heading">
-                <span>ABOUT SECTION</span>
-            </div>
 
-            <div class="interSection-1">
-                <div class="inter-colum-section">
-                    <div class="name">
-                        <span>First Name</span>
-                        <form action="">
-                            <input type="text" name="" id="firstName" placeholder="eg: ajay">
-                        </form>
-                    </div>
-                    <div class="name">
-                        <span>Middle Name</span>
-                        <form action="">
-                            <input type="text" name="" id="middleName" placeholder="eg: herbet">
-                        </form>
-                    </div>
-                    <div class="name">
-                        <span>Last Name</span>
-                        <form action="">
-                            <input type="text" name="" id="lastName" placeholder="eg: singh">
-                        </form>
-                    </div>
-                </div>
-            </div>
 
-            <div class="interSection-1">
-                <div class="inter-colum-section">
-                    <div class="name">
-                        <span>Your Image</span>
-                        <form action="">
-                            <input type="image" src="" alt="" id="image">
-                        </form>
-                    </div>
-                    <div class="name">
-                        <span>Designation</span>
-                        <form action="">
-                            <input type="text" src="" alt="" id="designation" placeholder="eg:SDE">
-                        </form>
-                    </div>
-                    <div class="name">
-                        <span>Address</span>
-                        <form action="">
-                            <input type="tetx" src="" alt="" id="address" placeholder="eg:mumbai">
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <div class="interSection-1">
-                <div class="inter-colum-section">
-                    <div class="name">
-                        <span>Email</span>
-                        <form action="">
-                            <input type="email" src="" alt="" id="email" placeholder="xyz@123.com">
-                        </form>
-                    </div>
-                    <div class="name">
-                        <span>Phone No</span>
-                        <form action="">
-                            <input type="number" src="" alt="" id="designation" placeholder="eg:0000 111 22 3">
-                        </form>
-                    </div>
-                    <div class="name">
-                        <span>Summary</span>
-                        <form action="">
-                            <input type="text" src="" alt="" id="summary" placeholder="eg: doe">
-                        </form>
-                    </div>
-                </div>
-            </div>
+<!-- footer----------------------------------->
+ <div class="footer" id="footer">
+    <div class="left-footer">
+        <div class="heading">Efficient</div>
+        <div class="heading-para">
+            <span>Create professional resumes and get job ready  <br>with ease using our platform.</span>
         </div>
-        <div class="achievement">
-            <div class="about-heading">
-                <span>ACHIEVEMENTS</span>
-            </div>
-
-            <div class="inter-colum-section">
-                <div class="name">
-                    <span>Title</span>
-                    <form action="">
-                        <input type="text" name="" id="title" placeholder="eg:contest">
-                    </form>
-                    
-                </div>
-                <div class="name">
-                    <span>Desrciption</span>
-                    <form action="">
-                        <input type="text" name="" id="description" placeholder="eg: xyz xyz">
-                    </form>
-                    
-                </div>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+    </div>
+    <div class="right-footer">
+        <div class="email-section">
+            <div class="customer-care">
+                <span>
+                    Customer-Care: 02525-xxxxxx
+                </span>
                 
             </div>
-
-
+            <div class="email">
+                <span>Email: xyz1234@gmail.com</span>
+            </div>
+            <div class="feedback">
+                <span>Your feedBack is Important kidly make it happen</span>
+                <form action="">
+                    <input type="tetx" placeholder="Write your feedback here">
+                </form>
+            </div>
+            <div class="copyright">
+                <span>@ 2024 All right reserved to Ajay Singh</span>
+            </div>
         </div>
-
-        
-        
-
     </div>
+ </div>
 
+ <script src="./index.js"></script>
+ <script>
+    window.onload = function(){
+        window.scrollTo(0,0);
+    };
+ </script>
 </body>
 </html>

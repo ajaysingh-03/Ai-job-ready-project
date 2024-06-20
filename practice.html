@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>testimonials</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 100dvh;
+        color: white;
+      }
+      #details {
+        font-size: 18px;
+      }
+      #userInfo {
+        width: 50%;
+        border-radius: 16px;
+        background-color: rgb(89, 89, 252);
+        /* height: 300px; */
+        min-height: fit-content;
+        padding: 1.5rem 2rem;
+        margin: auto;
+      }
+      #userPic {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .pcst {
+        width: fit-content;
+        margin: 2rem auto 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+      }
+      #statusBar {
+        margin: 1rem 0;
+        background-color: azure;
+        height: 8px;
+        /* width: 100%; */
+        border-radius: 12px;
+        animation: incr 3s linear infinite;
+      }
+      @keyframes incr {
+        0%{
+          width: 0;
+        }
+        100%{
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="userInfo">
+        <div id="statusBar"></div>
+        <p id="details"></p>
+        <div class="pcst">
+          <img src="" alt="" id="userPic" />
+          <div>
+            <h2 id="userName"></h2>
+            <h2 id="userPost"></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="userdat.js"></script>
+    <script>
+      let userData = testimonials;
+      let userInfo = document.getElementById("userInfo");
+      let details = document.getElementById("details");
+      let userPic = document.getElementById("userPic");
+      let userName = document.getElementById("userName");
+      let userPost = document.getElementById("userPost");
+      let idx = 0;
+      function showUsers(userData, idx) {
+        userData.innerHTML = "";
+        if (idx + 1 === userData.length) {
+          idx = 0;
+        }
+        let data = userData[idx];
+        console.log(userData);
+        details.innerText = data.text;
+        userPic.src = data.photo;
+        userName.innerText = data.name;
+        userPost.innerHTML = data.position;
+      }
+
+      setInterval(() => showUsers(userData, idx++), 3000);
+    </script>
+  </body>
+</html>

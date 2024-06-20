@@ -6,15 +6,21 @@
 }
 body{
     font-family: "Noto Sans", sans-serif;
+    /* width: 100vw; */
 }
-.header{
+
+.nav{
+    height: 100%;
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
     color: black;
     align-items: center;
-    padding: 0 4rem;
+    padding: 0 40px;
     height: 5rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
 .logo{
     font-size: 27px;
     font-weight: bold   ;
@@ -25,10 +31,11 @@ body{
     text-decoration: none;
     list-style: none;
     font-size: 20px;
+    cursor: pointer;
 }
 /* section1---------------------------------------- */
 .section-1{
-    width: 100vw;
+    width: 100%;
     display: flex;
     background-color: #1A1A1A;
 }
@@ -67,21 +74,62 @@ body{
     /* background-color: aquamarine; */
     
 }
-.getBtn{
+/* .getBtn{
     width: 180px;
     padding: 20px;
     background-color: #00796B;
     border-radius: 25px;
     border: none;
     color: white;
-    font-size: 15px;
+    font-size: 15px; */
+
+
+.button-29 {
+  align-items: center;
+  width: 120px;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
 }
-.getBtn:hover{
-    background-color: #0f4741;
-    cursor: pointer;
-    box-shadow: 0 0 0 2px;
-    transform: scale(1.1);
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
 }
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
 /* right div------------------------------ */
 /* .right-conatiner{
     width: 50%;
@@ -104,7 +152,7 @@ body{
 }
 /* section2-------------- */
 .section-2{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     margin-top: 6rem;
     display: flex;
@@ -120,7 +168,7 @@ body{
     /* background-color: aqua; */
 }
 .left-section2{
-    width: 50vw;
+    width: 50%;
     /* height: 45%; */
     margin: auto 0;
     padding-left: 2rem;
@@ -129,7 +177,7 @@ body{
     /* background-color: aquamarine; */
 }
 .right-section2{
-    width: 50vw;
+    width: 50%;
     gap: 2rem;
     padding-left: 8rem;
     line-height: 30px;
@@ -159,9 +207,10 @@ body{
     color: #00796B;
 }
 .image-conatainer{
-    width: 100vw;
+    width: 100%;
     height: 50%;
     object-fit: cover;
+    /* background-color: #5adaff; */
 }
 .imag-content{
     width: 90%;
@@ -177,52 +226,120 @@ body{
 }
 
 
-
-/* form filling section--------------------------------------------------------------- */
-.section-3-form{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
-.about-section, .achievement{
-    width: 90%;
-    height: 30%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    border: 1px solid gray;
-}
-.about-heading span{
-    background-color: #1E2532;
-    color: whitesmoke;  
-    font-weight: bold;
-    font-size: 1rem;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    padding-left: 30px;
-}
-.interSection-1{
-    width: 95%;
-    /* background-color: aquamarine; */
-    margin: auto;
-}
-.inter-colum-section{
-    display: flex;
-    justify-content: space-between;
-}
-.name span{
-    font-weight: 500;
-    color: black;
-}
-.name input{
-    height: 30px;
-    width: 260px;
-    /* border: gray; */
-}
 /* .achievement{
 
 } */
+
+/* footer -------------------------*/
+.footer{
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    background-color: #1A1A1A;
+    position: sticky;
+}
+.left-footer{
+    width: 35%;
+    /* background-color:aquamarine ; */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 3rem;
+}
+.left-footer .heading{
+    padding-left: 2rem;
+    padding-top: 3rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: whitesmoke;
+}
+.left-footer .heading-para, .icons{
+    padding-left: 2rem;
+    color: whitesmoke;
+}
+.icons{
+    display: flex;
+    gap: 2rem;
+}
+.right-footer{
+    /* background-color: #5adaff; */
+    width: 65%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 4rem;
+    /* gap: 2rem; */
+}
+.email-section{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-left: 20rem;
+}
+.customer-care, .email, .feedback{
+    width: 100%;
+    /* text-align: center; */
+    font-size: 1.4rem;
+    color: white;
+}
+.feedback input{
+    height: 25px;
+    width: 70%;
+}
+.copyright{
+    font-size: 15px;
+}
+
+/* slider section----------------- */
+.slider-section{
+    width: 100%;
+    height: 50vh;
+    /* background-color: #5adaff; */
+    
+}
+.slider-section-content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.slider-content{
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    /* background-color:aquamarine ; */
+    overflow: hidden;
+    transition: 1s ease;
+    cursor: pointer;
+    
+}
+button{
+    position: absolute;
+    top: 50%;
+    /* transform: translateY(-50%); */
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+.slider-content img{
+    width: 100%;
+    height: auto;
+}
+
+.slider-content img:hover{
+    transform: scale(1.1);
+}
+#prevBtn{
+    left: 10px;
+  }
+#nextBtn{
+    right: 10px;
+  }
