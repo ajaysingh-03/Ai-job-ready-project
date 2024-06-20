@@ -10,42 +10,42 @@ let heading="";
 
 
 
-async function Search(prompt, heading) {
-    showLoader(); // Show loader when starting the search
-    jobSuggestionsDisplayContainer.style.display='none';
-    try {
-        // For text-only input, use the gemini-pro model
-        const model = genAI.getGenerativeModel({ model: "gemini-pro" });
-        const result = await model.generateContent(prompt);
-        const response = await result.response;
-        const text = await response.text(); // Await the text extraction
-        console.log(text);
+// async function Search(prompt, heading) {
+//     showLoader(); // Show loader when starting the search
+//     jobSuggestionsDisplayContainer.style.display='none';
+//     try {
+//         // For text-only input, use the gemini-pro model
+//         const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+//         const result = await model.generateContent(prompt);
+//         const response = await result.response;
+//         const text = await response.text(); // Await the text extraction
+//         console.log(text);
         
-        const md = window.markdownit(); 
-        const htmlContent = md.render(text);
+//         const md = window.markdownit(); 
+//         const htmlContent = md.render(text);
 
-        // Clear previous content and add heading
-        jobSuggestionsDisplayContainer.innerHTML = `<h1 id="jobSuggestionsDisplayContainerHeading" class="text-2xl font-bold text-blue-600">${heading}</h1><br>${htmlContent}`;
-        jobSuggestionsDisplayContainer.style.justifyContent = "center";
-        jobSuggestionsDisplayContainer.style.display='block';
-    } catch (error) {
-        console.error("Error fetching job suggestions:", error);
-        jobSuggestionsDisplayContainer.innerHTML = "<p>Error fetching job suggestions. Please try again later.</p>";
-        jobSuggestionsDisplayContainer.style.display='block';
-    } finally {
-        hideLoader(); // Hide loader after content is loaded
-    }
-}
+//         // Clear previous content and add heading
+//         jobSuggestionsDisplayContainer.innerHTML = `<h1 id="jobSuggestionsDisplayContainerHeading" class="text-2xl font-bold text-blue-600">${heading}</h1><br>${htmlContent}`;
+//         jobSuggestionsDisplayContainer.style.justifyContent = "center";
+//         jobSuggestionsDisplayContainer.style.display='block';
+//     } catch (error) {
+//         console.error("Error fetching job suggestions:", error);
+//         jobSuggestionsDisplayContainer.innerHTML = "<p>Error fetching job suggestions. Please try again later.</p>";
+//         jobSuggestionsDisplayContainer.style.display='block';
+//     } finally {
+//         hideLoader(); // Hide loader after content is loaded
+//     }
+// }
 
-function showLoader() {
-    const loader = document.getElementById('loadingSpinner');
-    loader.style.display='block';
-}
+// function showLoader() {
+//     const loader = document.getElementById('loadingSpinner');
+//     loader.style.display='block';
+// }
 
-function hideLoader() {
-    const loader = document.getElementById('loadingSpinner');
-    loader.style.display='none';
-}
+// function hideLoader() {
+//     const loader = document.getElementById('loadingSpinner');
+//     loader.style.display='none';
+// }
 
 document.getElementById("jobSuggestionButton").addEventListener("click", () => {
     console.log("hello");
@@ -59,6 +59,19 @@ document.getElementById("jobSuggestionButton").addEventListener("click", () => {
     Search(prompt, heading);
     console.log(prompt);
 });
+
+// document.getElementById("jobSuggestionButton").addEventListener("click", () => {
+//     console.log("hello");
+//     prompt = "";
+//     let skills_dsp = document.querySelectorAll(".skills-items .preview-item .preview-item-val");
+//     heading = "Jobs Suggestion :-";
+//     skills_dsp.forEach(element => {
+//         prompt = prompt + element.innerHTML + " ";
+//     });
+//     prompt += " jobs suggestions with reference links";
+//     Search(prompt, heading);
+//     console.log(prompt);
+// });
 
 document.getElementById("roadmapSuggestionButton").addEventListener("click", () => {
     prompt = "";
