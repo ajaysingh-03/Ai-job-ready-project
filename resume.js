@@ -1,9 +1,9 @@
-const tempBtn=document.getElementById('templatebtn');
+// const tempBtn=document.getElementById('templatebtn');
 let globalSkills = [];
 
-tempBtn.addEventListener('click', function() {
-    window.location.href = 'template.html'; 
-});
+// tempBtn.addEventListener('click', function() {
+//     window.location.href = 'template.html'; 
+// });
 
 function generateCV() {
     // Get form data
@@ -285,7 +285,7 @@ const displayCV = (userData) => {
 }
 
 // generate CV
-const generateCV = () => {
+generateCV = () => {
     let userData = getUserInputs();
     displayCV(userData);
     console.log(userData);

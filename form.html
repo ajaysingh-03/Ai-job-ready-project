@@ -6,6 +6,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
   </head>
 
   <body class="formBody">
@@ -666,31 +673,7 @@
           id="jobSuggestionsDisplayContainer"
           class="w-[85%] h-[80vh] rounded-xl pr-8 pl-10 py-6 shadow-lg h-[100%] overflow-y-auto tracking-wide leading-relaxed"
         >
-        Jobs Suggestion :-
-
-Entry-Level Data Scientist Jobs
-
-Data Scientist - Entry Level at Indeed (https://www.indeed.com/viewjob?jk=b40dba26fb2f60f0&from=jobmap&tk=1g7ifk197et4n801&from=serp&vjs=3)
-Associate Data Scientist at Airbnb (https://www.airbnb.com/careers/search?category=data-science&employee_type=entry_level)
-Data Scientist I at Amazon (https://www.amazon.jobs/en/jobs/1653029/data-scientist-i)
-Data Analyst (Entry-Level) at Google (https://careers.google.com/jobs/results/3116440373111287392)
-Junior Data Scientist at Lyft (https://boards.greenhouse.io/lyft/jobs/6493536003)
-Mid-Level Data Scientist Jobs
-
-Data Scientist at Netflix (https://jobs.netflix.com/positions/a5e25a1a-6c68-4c97-8578-531ea910dbc4)
-Senior Data Scientist at Uber (https://www.uber.com/careers/us/en/job/sr-data-scientist-analytics/01b976b6-9556-4682-9508-a6eef553c6aa)
-Lead Data Scientist at Spotify (https://jobs.spotify.com/us-en/job/lead-data-scientist-245777/)
-Data Science Manager at Facebook (https://www.facebook.com/careers/jobs/1007479872699954/)
-Principal Data Scientist at LinkedIn (https://business.linkedin.com/talent-solutions/jobs/view/1388242512)
-Senior-Level Data Scientist Jobs
-
-Chief Data Scientist at Microsoft (https://careers.microsoft.com/us/en/job/1405748/chief-data-scientist-2)
-Vice President of Data Science at Salesforce (https://jobs.salesforce.com/job/Vice-President-of-Data-Science-San-Francisco-CA/70057970002)
-CTO of Data Science at Google (https://careers.google.com/jobs/results/7292303567944520456)
-Senior Director of Data Science at Amazon (https://www.amazon.jobs/en/jobs/2782109/senior-director-data-science-analytics)
-Fellow at Stanford University (https://academicjobs.stanford.edu/postings/144662)
-
-      </div>
+        </div>
       </div>
     </div>
 
@@ -829,23 +812,36 @@ Fellow at Stanford University (https://academicjobs.stanford.edu/postings/144662
         </div>
       </div>
     </div>
+
     <script src="./form.js"></script>
-    <script type="importmap">
-      {
-        "imports": {
-          "@google/generative-ai": "https://esm.run/@google/generative-ai"
-        }
-      }
-    </script>
-    <script src="https://code.jquery.com/jquery-3.6.4.js"
-    integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.js"
-    integrity="sha512-bZAXvpVfp1+9AUHQzekEZaXclsgSlAeEnMJ6LfFAvjqYUVZfcuVXeQoN5LhD7Uw0Jy4NCY9q3kbdEXbwhZUmUQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.js"
+      integrity="sha512-bZAXvpVfp1+9AUHQzekEZaXclsgSlAeEnMJ6LfFAvjqYUVZfcuVXeQoN5LhD7Uw0Jy4NCY9q3kbdEXbwhZUmUQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="./resume.js"></script>
     <script src="./index.js"></script>
-    <script src="./jobsuggestion.js" deffer></script>
-    <script src="form.js"></script>
+    <script type="module" src="jobsuggestion.js"></script>
+    <!-- <script src="./jobsuggestion.js"  deffer></script> -->
+    <!-- <script src="form./js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
+
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"
+    ></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.js"
+      integrity="sha512-bZAXvpVfp1+9AUHQzekEZaXclsgSlAeEnMJ6LfFAvjqYUVZfcuVXeQoN5LhD7Uw0Jy4NCY9q3kbdEXbwhZUmUQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </body>
 </html>
